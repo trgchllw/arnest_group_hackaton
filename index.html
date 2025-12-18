@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnest Group - Доступная гигиена</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: linear-gradient(135deg, #fbfbfb 0%, #4372B3 100%); font-family: sans-serif; min-height: 100vh; }
+        #scanner-container { display: none; margin: 20px auto; max-width: 600px; background: #000; border-radius: 15px; overflow: hidden; position: relative; }
+        video { width: 100%; display: block; }
+        canvas { position: absolute; top: 0; left: 0; width: 100%; pointer-events: none; }
+        .debug-overlay { position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.7); color: #0f0; padding: 10px; font-family: monospace; font-size: 12px; border-radius: 5px; }
+        .result-card { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; width: 90%; max-width: 500px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+        .logo { font-size: 1.8rem; font-weight: bold; color: white; }
+        .status-indicator { width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white; }
+        .bg-green { background: #28a745; } .bg-yellow { background: #ffc107; } .bg-red { background: #dc3545; } .bg-gray { background: #6c757d; }
+        .test-panel { background: rgba(255,255,255,0.9); padding: 15px; border-radius: 10px; margin: 20px auto; max-width: 600px; }
+    </style>
+</head>
+<body>
+    
+    <div class="container text-center py-4">
+        <img src="arnest-logo.png"
+            width="400"
+            height="">
+    </div>
+
+    <div class="container test-panel">
+        <h5 class="text-center mb-3">🚨 ДЕМО-РЕЖИМ (Если камера не сканирует)</h5>
+        <div class="row">
+            <div class="col-12 col-md-4 mb-2"><button onclick="testBarcode('4601234567890')" class="btn btn-warning w-100">Тест: Жёлтый</button></div>
+            <div class="col-12 col-md-4 mb-2"><button onclick="testBarcode('4607890123456')" class="btn btn-success w-100">Тест: Зелёный</button></div>
+            <div class="col-12 col-md-4"><button onclick="testBarcode('4601112233445')" class="btn btn-danger w-100">Тест: Красный</button></div>
+        </div>
+        <p class="text-muted small mt-3 mb-0">Кликните кнопку, если сканер не распознаёт штрих-код</p>
+    </div>
+
+    <div class="container text-center">
+        <button id="btn-start" class="btn btn-light btn-lg px-5 py-3 mb-3 shadow">📷 НАЧАТЬ СКАНИРОВАНИЕ</button>
+        
+        <div id="scanner-container">
+            <video id="camera" autoplay playsinline muted></video>
+            <canvas id="canvas"></canvas>
+            <div class="debug-overlay" id="debug-overlay">Ожидание...</div>
+        </div>
+        
+        <button id="btn-stop" class="btn btn-danger btn-lg px-5 py-3 shadow" style="display:none;">⏹ ОСТАНОВИТЬ</button>
+    </div>
+
+    <div id="result-card" class="result-card card">
+        <div class="card-body text-center p-5">
+            <div id="status-icon" class="status-indicator bg-gray">❓</div>
+            <h3 id="product-name" class="mb-3">Продукт не найден</h3>
+            <p id="safety-text" class="lead mb-4">Штрих-код отсутствует в базе</p>
+            <div id="ingredients-list" class="mb-4" style="display:none;">
+                <small class="text-muted">Состав:</small>
+                <p id="inci" class="font-monospace"></p>
+            </div>
+            <button id="btn-again" class="btn btn-outline-primary">Сканировать ещё</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quagga@0.12.1/dist/quagga.min.js"></script>
+    
+    <script>
+        const productsDB = {
+            "4601234567890": { name: "Шампунь 'Нежный уход'", inci: ["Aqua", "Sodium Laureth Sulfate", "Cocamidopropyl Betaine", "Parfum", "Limonene"], safety: "yellow", text: "Содержит аллергены: Limonene" },
+            "4607890123456": { name: "Гель для душа 'Безопасный'", inci: ["Aqua", "Glycerin", "Coco-Glucoside", "Aloe Barbadensis"], safety: "green", text: "Безопасно для чувствительной кожи" },
+            "4601112233445": { name: "Мыло детское 'Ультра'", inci: ["Sodium Palmate", "Parfum", "Methylisothiazolinone", "Limonene", "Linalool"], safety: "red", text: "Высокий риск аллергии!" }
+        };
+
+        const btnStart = document.getElementById('btn-start');
+        const btnStop = document.getElementById('btn-stop');
+        const btnAgain = document.getElementById('btn-again');
+        const scannerContainer = document.getElementById('scanner-container');
+        const resultCard = document.getElementById('result-card');
+        const video = document.getElementById('camera');
+        const canvas = document.getElementById('canvas');
+        const debugOverlay = document.getElementById('debug-overlay');
+
+        btnStart.addEventListener('click', async () => {
+            btnStart.style.display = 'none';
+            scannerContainer.style.display = 'block';
+            btnStop.style.display = 'inline-block';
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ 
+                    video: { 
+                        facingMode: "environment",
+                        width: { ideal: 1920 },
+                        height: { ideal: 1440 }
+                    } 
+                });
+                
+                video.srcObject = stream;
+                await video.play();
+                
+                Quagga.init({
+                    inputStream: {
+                        name: "Live",
+                        type: "LiveStream",
+                        target: video,
+                        constraints: {
+                            width: { min: 640, ideal: 1280 },
+                            height: { min: 480, ideal: 720 },
+                            facingMode: "environment"
+                        },
+                        area: { top: "25%", right: "10%", left: "10%", bottom: "25%" }
+                    },
+                    decoder: {
+                        readers: ["ean_reader"],
+                        multiple: false,
+                        halfSample: false,
+                        patchSize: "large"
+                    },
+                    locate: true,
+                    numOfWorkers: 2
+                }, (err) => {
+                    if (err) {
+                        debugOverlay.textContent = 'Ошибка: ' + err.message;
+                        alert('Ошибка сканера');
+                        stopScanner();
+                        return;
+                    }
+                    Quagga.start();
+                    
+                    Quagga.onProcessed((result) => {
+                        if (result) {
+                            const ctx = canvas.getContext('2d');
+                            canvas.width = video.videoWidth;
+                            canvas.height = video.videoHeight;
+                            ctx.clearRect(0, 0, canvas.width, canvas.height);
+                            
+                            if (result.boxes) {
+                                ctx.strokeStyle = '#0f0';
+                                ctx.lineWidth = 2;
+                                result.boxes.filter(b => b !== result.box).forEach(b => {
+                                    ctx.strokeRect(b[0], b[1], b[2], b[3]);
+                                });
+                            }
+                            
+                            if (result.box) {
+                                ctx.strokeStyle = '#f00';
+                                ctx.lineWidth = 3;
+                                ctx.strokeRect(result.box[0], result.box[1], result.box[2], result.box[3]);
+                            }
+                            
+                            if (result.codeResult) {
+                                ctx.font = '16px monospace';
+                                ctx.fillStyle = '#f00';
+                                ctx.fillText('ЧТЕНИЕ...', 10, 30);
+                            }
+                            debugOverlay.textContent = 'Кадр обработан | Кодов найдено: ' + (result.codes?.length || 0);
+                        }
+                    });
+                });
+
+                Quagga.onDetected(handleBarcode);
+            } catch (e) {
+                alert('Ошибка камеры: ' + e.message);
+                stopScanner();
+            }
+        });
+
+        function handleBarcode(result) {
+            const code = result.codeResult.code;
+            debugOverlay.textContent = 'НАЙДЕН: ' + code;
+            stopScanner();
+            showResult(code);
+        }
+
+        function showResult(barcode) {
+            const product = productsDB[barcode];
+            
+            if (product) {
+                document.getElementById('product-name').textContent = product.name;
+                document.getElementById('safety-text').textContent = product.text;
+                document.getElementById('inci').textContent = product.inci.join(', ');
+                document.getElementById('ingredients-list').style.display = 'block';
+                
+                const icon = document.getElementById('status-icon');
+                icon.className = `status-indicator bg-${product.safety}`;
+                icon.textContent = product.safety === 'green' ? '✓' : product.safety === 'yellow' ? '!' : '✗';
+            } else {
+                document.getElementById('product-name').textContent = 'Продукт не найден';
+                document.getElementById('safety-text').textContent = 'Штрих-код: ' + barcode;
+                document.getElementById('ingredients-list').style.display = 'none';
+                document.getElementById('status-icon').className = 'status-indicator bg-gray';
+                document.getElementById('status-icon').textContent = '❓';
+            }
+            
+            resultCard.style.display = 'block';
+        }
+
+        function stopScanner() {
+            Quagga.stop();
+            if (video.srcObject) video.srcObject.getTracks().forEach(t => t.stop());
+            scannerContainer.style.display = 'none';
+            btnStop.style.display = 'none';
+            btnStart.style.display = 'inline-block';
+        }
+
+        btnStop.addEventListener('click', stopScanner);
+        
+        btnAgain.addEventListener('click', () => {
+            resultCard.style.display = 'none';
+            btnStart.click();
+        });
+
+        function testBarcode(code) {
+            handleBarcode({ codeResult: { code: code } });
+        }
+    </script>
+</body>
+</html>
