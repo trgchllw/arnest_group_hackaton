@@ -1,0 +1,175 @@
+{
+  "report_title": "Unified Allergen Database Summary Report",
+  "report_title_ru": "Отчёт о единой базе данных аллергенов косметических продуктов",
+  "creation_date": "2025-11-18",
+  "status": "Completed",
+  "summary": {
+    "total_allergens": 114,
+    "duplicate_records_removed": 18,
+    "original_records": 132,
+    "data_sources": 4,
+    "categories": 5,
+    "coverage": {
+      "EU_26_fragrance": 26,
+      "extended_allergens": 56,
+      "preservatives": 10,
+      "surfactants": 12,
+      "latex_resins": 10
+    }
+  },
+  "deduplication_report": {
+    "status": "Completed",
+    "duplicates_found": 18,
+    "duplicates_removed": 18,
+    "deduplication_method": "Remove duplicates by INCI name, keep first occurrence",
+    "priority_order": [
+      "Ароматические аллергены (EU 26)",
+      "Расширенные аллергены",
+      "Консерванты",
+      "ПАВ (Surfactants)",
+      "Латекс, смолы, канифоль"
+    ],
+    "duplicates_list": [
+      "Formaldehyde",
+      "Quaternium-15",
+      "DMDM Hydantoin",
+      "Imidazolidinyl Urea",
+      "Diazolidinyl Urea",
+      "Methylisothiazolinone (MI)",
+      "Methylchloroisothiazolinone (MCI)",
+      "Benzisothiazolinone (BIT)",
+      "Iodopropynyl Butylcarbamate (IPBC)",
+      "Methylparaben",
+      "Ethylparaben",
+      "Propylparaben",
+      "Butylparaben",
+      "Phenoxyethanol",
+      "Cocamidopropyl Betaine (CAPB)",
+      "Sodium Lauryl Sulfate (SLS)",
+      "Sodium Laureth Sulfate (SLES)",
+      "Triclosan"
+    ]
+  },
+  "data_quality_report": {
+    "total_entries": 114,
+    "entries_with_cas": 112,
+    "entries_with_pubchem_cid": 89,
+    "entries_with_n_a_pubchem": 25,
+    "entries_with_complete_data": 89,
+    "completeness_percentage": 78.1,
+    "notes": "N/A PubChem CID values are normal for natural extracts and complex mixtures without single chemical identity"
+  },
+  "categorization_report": {
+    "EU_26": {
+      "count": 26,
+      "percentage": 22.8,
+      "description": "Обязательные ароматические аллергены для декларации",
+      "risk_level": "Высокий",
+      "regulatory_priority": "Высокий"
+    },
+    "extended_allergens": {
+      "count": 56,
+      "percentage": 49.1,
+      "description": "Дополнительные потенциальные аллергены",
+      "risk_level": "Средний-высокий",
+      "regulatory_priority": "Средний"
+    },
+    "preservatives": {
+      "count": 10,
+      "percentage": 8.8,
+      "description": "Консерванты-аллергены",
+      "risk_level": "Высокий",
+      "regulatory_priority": "Высокий"
+    },
+    "surfactants": {
+      "count": 12,
+      "percentage": 10.5,
+      "description": "ПАВ-аллергены",
+      "risk_level": "Средний",
+      "regulatory_priority": "Средний"
+    },
+    "latex_resins": {
+      "count": 10,
+      "percentage": 8.8,
+      "description": "Природные аллергены",
+      "risk_level": "Высокий",
+      "regulatory_priority": "Высокий"
+    }
+  },
+  "regulatory_framework": {
+    "primary_regulations": [
+      "EU Regulation 1223/2009 (Cosmetics Regulation)",
+      "EU Regulation 1223/2009 Annex III - Prohibited substances",
+      "EU Regulation 1223/2009 Annex V - Restricted substances",
+      "SCCS (Scientific Committee on Consumer Safety) Opinions"
+    ],
+    "standards": [
+      "ISO 9001 - Quality Management",
+      "ISO 22716 - Good Manufacturing Practice (GMP)",
+      "ISO 45001 - Occupational Health and Safety",
+      "INCI Nomenclature"
+    ],
+    "databases": [
+      "CosIng Database (EU)",
+      "PubChem Database (NIH)",
+      "ChemIDPlus (US NLM)",
+      "IFRA (International Fragrance Association)"
+    ]
+  },
+  "output_files": [
+    {
+      "filename": "allergens_database.json",
+      "format": "JSON",
+      "purpose": "Main unified allergen database with basic information",
+      "entries": 114,
+      "fields": [
+        "id",
+        "name_ru",
+        "inci",
+        "cas",
+        "pubchem_cid",
+        "category"
+      ]
+    },
+    {
+      "filename": "allergens_database_detailed.json",
+      "format": "JSON",
+      "purpose": "Detailed database with regulatory status and risk information by category",
+      "entries": 76,
+      "fields": [
+        "id",
+        "name",
+        "inci",
+        "cas",
+        "pubchem_cid",
+        "risk_category",
+        "regulatory_status/type",
+        "reaction_type"
+      ]
+    },
+    {
+      "filename": "Unified_Allergens_Database.xlsx",
+      "format": "Excel",
+      "purpose": "Excel workbook with multiple sheets",
+      "sheets": 7,
+      "entries": 114
+    }
+  ],
+  "recommendations": [
+    "Использовать базу данных для анализа косметических составов в приложении для людей с чувствительной кожей",
+    "Регулярно обновлять данные согласно новым SCCS Opinion и изменениям регуляции ЕС",
+    "Реализовать функцию сравнения состава продукта с аллергенной базой",
+    "Добавить функцию определения перекрёстной реактивности для связанных аллергенов",
+    "Использовать PubChem API для автоматической валидации новых компонентов",
+    "Создать систему уведомлений при обновлении регуляторных ограничений"
+  ],
+  "quality_checks_performed": [
+    "✓ Дедупликация по INCI названиям",
+    "✓ Проверка на пропуски в CAS и PubChem CID",
+    "✓ Валидация INCI против CosIng Database",
+    "✓ Проверка CAS формата",
+    "✓ Проверка целостности числовых идентификаторов",
+    "✓ Проверка на консистентность названий аллергенов",
+    "✓ Валидация категоризации"
+  ]
+}

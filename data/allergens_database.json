@@ -1,0 +1,963 @@
+{
+  "metadata": {
+    "name": "Unified Allergen Database for Cosmetics",
+    "version": "1.0",
+    "created": "2025-11-18",
+    "language": "Russian/English",
+    "total_allergens": 114,
+    "deduplication_info": "Removed 18 duplicate entries by INCI name",
+    "source_files": [
+      "EU 82 Allergens Database",
+      "Preservatives Allergens Database",
+      "Surfactants Allergens Database",
+      "Latex Resins Allergens Database"
+    ],
+    "description": "Объединённая база данных из 114 уникальных аллергенов косметических продуктов, включая EU 26, консерванты, ПАВ и аллергены природного происхождения"
+  },
+  "categories": {
+    "EU_26": {
+      "name": "Ароматические аллергены (EU 26)",
+      "name_en": "Fragrance Allergens (EU 26)",
+      "description": "26 обязательных к декларации ароматических аллергенов согласно EU Regulation 1223/2009 Annex III",
+      "count": 26
+    },
+    "extended": {
+      "name": "Расширенные аллергены",
+      "name_en": "Extended Allergens",
+      "description": "56 дополнительных потенциальных аллергенов, включая консерванты, эмульгаторы, эфирные масла, красители",
+      "count": 56
+    },
+    "preservatives": {
+      "name": "Консерванты",
+      "name_en": "Preservatives",
+      "description": "10 консервантов с высоким аллергенным потенциалом (изотиазолиноны, формальдегид-доноры, парабены)",
+      "count": 10
+    },
+    "surfactants": {
+      "name": "ПАВ (Surfactants)",
+      "name_en": "Surfactants",
+      "description": "12 поверхностно-активных веществ-аллергенов (сульфаты, амфотерные, кватерниумы)",
+      "count": 12
+    },
+    "latex_resins": {
+      "name": "Латекс, смолы, канифоль",
+      "name_en": "Latex, Resins, Rosin",
+      "description": "10 аллергенов природного происхождения (канифоль и производные, бальзамы, натуральный латекс)",
+      "count": 10
+    }
+  },
+  "allergens": [
+    {
+      "id": 1,
+      "name_ru": "Alpha-Isomethyl Ionone",
+      "inci": "Alpha-Isomethyl Ionone",
+      "cas": "127-51-5",
+      "pubchem_cid": "5364319",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 2,
+      "name_ru": "Amyl Cinnamal",
+      "inci": "Amyl Cinnamal",
+      "cas": "122-40-7",
+      "pubchem_cid": "31211",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 3,
+      "name_ru": "Amylcinnamyl Alcohol",
+      "inci": "Amylcinnamyl Alcohol",
+      "cas": "101-85-9",
+      "pubchem_cid": "7656",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 4,
+      "name_ru": "Anise Alcohol",
+      "inci": "Anise Alcohol",
+      "cas": "105-13-5",
+      "pubchem_cid": "8127",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 5,
+      "name_ru": "Benzyl Alcohol",
+      "inci": "Benzyl Alcohol",
+      "cas": "100-51-6",
+      "pubchem_cid": "244",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 6,
+      "name_ru": "Benzyl Benzoate",
+      "inci": "Benzyl Benzoate",
+      "cas": "120-51-4",
+      "pubchem_cid": "233",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 7,
+      "name_ru": "Benzyl Cinnamate",
+      "inci": "Benzyl Cinnamate",
+      "cas": "103-41-3",
+      "pubchem_cid": "8355",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 8,
+      "name_ru": "Benzyl Salicylate",
+      "inci": "Benzyl Salicylate",
+      "cas": "118-58-1",
+      "pubchem_cid": "8765",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 9,
+      "name_ru": "Butylphenyl Methylpropional (Lilial)",
+      "inci": "Butylphenyl Methylpropional",
+      "cas": "80-54-6",
+      "pubchem_cid": "31253",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 10,
+      "name_ru": "Cinnamal",
+      "inci": "Cinnamal",
+      "cas": "104-55-2",
+      "pubchem_cid": "637511",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 11,
+      "name_ru": "Cinnamyl Alcohol",
+      "inci": "Cinnamyl Alcohol",
+      "cas": "104-54-1",
+      "pubchem_cid": "637512",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 12,
+      "name_ru": "Citral",
+      "inci": "Citral",
+      "cas": "5392-40-5",
+      "pubchem_cid": "638011",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 13,
+      "name_ru": "Citronellol",
+      "inci": "Citronellol",
+      "cas": "106-22-9",
+      "pubchem_cid": "8848",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 14,
+      "name_ru": "Coumarin",
+      "inci": "Coumarin",
+      "cas": "91-64-5",
+      "pubchem_cid": "323",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 15,
+      "name_ru": "Eugenol",
+      "inci": "Eugenol",
+      "cas": "97-53-0",
+      "pubchem_cid": "3314",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 16,
+      "name_ru": "Farnesol",
+      "inci": "Farnesol",
+      "cas": "4602-84-0",
+      "pubchem_cid": "445070",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 17,
+      "name_ru": "Geraniol",
+      "inci": "Geraniol",
+      "cas": "106-24-1",
+      "pubchem_cid": "637568",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 18,
+      "name_ru": "Hexyl Cinnamal",
+      "inci": "Hexyl Cinnamal",
+      "cas": "101-86-0",
+      "pubchem_cid": "8857",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 19,
+      "name_ru": "Hydroxyisohexyl 3-Cyclohexene Carboxaldehyde (Lyral)",
+      "inci": "Hydroxyisohexyl 3-Cyclohexene Carboxaldehyde",
+      "cas": "31906-04-4",
+      "pubchem_cid": "14866",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 20,
+      "name_ru": "Hydroxycitronellal",
+      "inci": "Hydroxycitronellal",
+      "cas": "107-75-5",
+      "pubchem_cid": "7794",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 21,
+      "name_ru": "Isoeugenol",
+      "inci": "Isoeugenol",
+      "cas": "97-54-1",
+      "pubchem_cid": "6556",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 22,
+      "name_ru": "Limonene",
+      "inci": "Limonene",
+      "cas": "5989-27-5",
+      "pubchem_cid": "22311",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 23,
+      "name_ru": "Linalool",
+      "inci": "Linalool",
+      "cas": "78-70-6",
+      "pubchem_cid": "6549",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 24,
+      "name_ru": "Methyl 2-Octynoate",
+      "inci": "Methyl 2-Octynoate",
+      "cas": "111-12-6",
+      "pubchem_cid": "8198",
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 25,
+      "name_ru": "Evernia Prunastri Extract (Oakmoss)",
+      "inci": "Evernia Prunastri Extract",
+      "cas": "90028-68-5",
+      "pubchem_cid": null,
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 26,
+      "name_ru": "Evernia Furfuracea Extract (Treemoss)",
+      "inci": "Evernia Furfuracea Extract",
+      "cas": "90028-67-4",
+      "pubchem_cid": null,
+      "category": "Ароматические аллергены (EU 26)"
+    },
+    {
+      "id": 27,
+      "name_ru": "Atranol",
+      "inci": "Atranol",
+      "cas": "526-37-4",
+      "pubchem_cid": "10236",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 28,
+      "name_ru": "Chloroatranol",
+      "inci": "Chloroatranol",
+      "cas": "57074-21-2",
+      "pubchem_cid": "109845",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 29,
+      "name_ru": "Methyl Eugenol",
+      "inci": "Methyl Eugenol",
+      "cas": "93-15-2",
+      "pubchem_cid": "7127",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 30,
+      "name_ru": "Acetyl Hexamethyl Tetralin",
+      "inci": "Acetyl Hexamethyl Tetralin",
+      "cas": "21145-77-7",
+      "pubchem_cid": "14866",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 31,
+      "name_ru": "Isopropyl Myristate",
+      "inci": "Isopropyl Myristate",
+      "cas": "110-27-0",
+      "pubchem_cid": "8042",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 32,
+      "name_ru": "Lanolin",
+      "inci": "Lanolin",
+      "cas": "8006-54-0",
+      "pubchem_cid": null,
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 33,
+      "name_ru": "Propylene Glycol",
+      "inci": "Propylene Glycol",
+      "cas": "57-55-6",
+      "pubchem_cid": "1030",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 34,
+      "name_ru": "Formaldehyde",
+      "inci": "Formaldehyde",
+      "cas": "50-00-0",
+      "pubchem_cid": "712",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 35,
+      "name_ru": "Quaternium-15",
+      "inci": "Quaternium-15",
+      "cas": "4080-31-3",
+      "pubchem_cid": "73077",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 36,
+      "name_ru": "DMDM Hydantoin",
+      "inci": "DMDM Hydantoin",
+      "cas": "6440-58-0",
+      "pubchem_cid": "32407",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 37,
+      "name_ru": "Imidazolidinyl Urea",
+      "inci": "Imidazolidinyl Urea",
+      "cas": "39236-46-9",
+      "pubchem_cid": "5339",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 38,
+      "name_ru": "Diazolidinyl Urea",
+      "inci": "Diazolidinyl Urea",
+      "cas": "78491-02-8",
+      "pubchem_cid": "38082",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 39,
+      "name_ru": "Methylisothiazolinone (MI)",
+      "inci": "Methylisothiazolinone",
+      "cas": "2682-20-4",
+      "pubchem_cid": "39800",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 40,
+      "name_ru": "Methylchloroisothiazolinone (MCI)",
+      "inci": "Methylchloroisothiazolinone",
+      "cas": "26172-55-4",
+      "pubchem_cid": "35853",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 41,
+      "name_ru": "Benzisothiazolinone",
+      "inci": "Benzisothiazolinone",
+      "cas": "2634-33-5",
+      "pubchem_cid": "15540",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 42,
+      "name_ru": "Iodopropynyl Butylcarbamate",
+      "inci": "Iodopropynyl Butylcarbamate",
+      "cas": "55406-53-6",
+      "pubchem_cid": "30858",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 43,
+      "name_ru": "Parabens (Methylparaben)",
+      "inci": "Methylparaben",
+      "cas": "99-76-3",
+      "pubchem_cid": "7456",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 44,
+      "name_ru": "Parabens (Ethylparaben)",
+      "inci": "Ethylparaben",
+      "cas": "120-47-8",
+      "pubchem_cid": "8434",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 45,
+      "name_ru": "Parabens (Propylparaben)",
+      "inci": "Propylparaben",
+      "cas": "94-13-3",
+      "pubchem_cid": "7175",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 46,
+      "name_ru": "Parabens (Butylparaben)",
+      "inci": "Butylparaben",
+      "cas": "94-26-8",
+      "pubchem_cid": "7184",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 47,
+      "name_ru": "Triclosan",
+      "inci": "Triclosan",
+      "cas": "3380-34-5",
+      "pubchem_cid": "5564",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 48,
+      "name_ru": "Sodium Lauryl Sulfate (SLS)",
+      "inci": "Sodium Lauryl Sulfate",
+      "cas": "151-21-3",
+      "pubchem_cid": "3423265",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 49,
+      "name_ru": "Sodium Laureth Sulfate (SLES)",
+      "inci": "Sodium Laureth Sulfate",
+      "cas": "68585-34-2",
+      "pubchem_cid": "23665884",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 50,
+      "name_ru": "Cocamidopropyl Betaine",
+      "inci": "Cocamidopropyl Betaine",
+      "cas": "61789-40-0",
+      "pubchem_cid": null,
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 51,
+      "name_ru": "Dimethicone",
+      "inci": "Dimethicone",
+      "cas": "9006-65-9",
+      "pubchem_cid": null,
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 52,
+      "name_ru": "Petrolatum",
+      "inci": "Petrolatum",
+      "cas": "8009-03-8",
+      "pubchem_cid": null,
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 53,
+      "name_ru": "Mineral Oil",
+      "inci": "Mineral Oil",
+      "cas": "8042-47-5",
+      "pubchem_cid": null,
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 54,
+      "name_ru": "Phenoxyethanol",
+      "inci": "Phenoxyethanol",
+      "cas": "122-99-6",
+      "pubchem_cid": "31236",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 55,
+      "name_ru": "Ethylhexylglycerin",
+      "inci": "Ethylhexylglycerin",
+      "cas": "70445-33-9",
+      "pubchem_cid": "167551",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 56,
+      "name_ru": "Tocopheryl Acetate",
+      "inci": "Tocopheryl Acetate",
+      "cas": "7695-91-2",
+      "pubchem_cid": "86472",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 57,
+      "name_ru": "PPD (p-Phenylenediamine)",
+      "inci": "p-Phenylenediamine",
+      "cas": "106-50-3",
+      "pubchem_cid": "7814",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 58,
+      "name_ru": "Toluene-2,5-Diamine",
+      "inci": "Toluene-2,5-Diamine",
+      "cas": "95-70-5",
+      "pubchem_cid": "7250",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 59,
+      "name_ru": "Resorcinol",
+      "inci": "Resorcinol",
+      "cas": "108-46-3",
+      "pubchem_cid": "5054",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 60,
+      "name_ru": "Hydroquinone",
+      "inci": "Hydroquinone",
+      "cas": "123-31-9",
+      "pubchem_cid": "785",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 61,
+      "name_ru": "Kojic Acid",
+      "inci": "Kojic Acid",
+      "cas": "501-30-4",
+      "pubchem_cid": "3840",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 62,
+      "name_ru": "Octinoxate",
+      "inci": "Ethylhexyl Methoxycinnamate",
+      "cas": "5466-77-3",
+      "pubchem_cid": "24561",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 63,
+      "name_ru": "Oxybenzone",
+      "inci": "Benzophenone-3",
+      "cas": "131-57-7",
+      "pubchem_cid": "4632",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 64,
+      "name_ru": "Octisalate",
+      "inci": "Ethylhexyl Salicylate",
+      "cas": "118-60-5",
+      "pubchem_cid": "8317",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 65,
+      "name_ru": "Homosalate",
+      "inci": "Homosalate",
+      "cas": "118-56-9",
+      "pubchem_cid": "8254",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 66,
+      "name_ru": "Avobenzone",
+      "inci": "Butyl Methoxydibenzoylmethane",
+      "cas": "70356-09-1",
+      "pubchem_cid": "51040",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 67,
+      "name_ru": "Titanium Dioxide (nano)",
+      "inci": "Titanium Dioxide",
+      "cas": "13463-67-7",
+      "pubchem_cid": "26042",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 68,
+      "name_ru": "Zinc Oxide (nano)",
+      "inci": "Zinc Oxide",
+      "cas": "1314-13-2",
+      "pubchem_cid": "14806",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 69,
+      "name_ru": "Retinol",
+      "inci": "Retinol",
+      "cas": "68-26-8",
+      "pubchem_cid": "445354",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 70,
+      "name_ru": "Retinyl Palmitate",
+      "inci": "Retinyl Palmitate",
+      "cas": "79-81-2",
+      "pubchem_cid": "5282108",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 71,
+      "name_ru": "Salicylic Acid",
+      "inci": "Salicylic Acid",
+      "cas": "69-72-7",
+      "pubchem_cid": "338",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 72,
+      "name_ru": "Glycolic Acid",
+      "inci": "Glycolic Acid",
+      "cas": "79-14-1",
+      "pubchem_cid": "757",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 73,
+      "name_ru": "Lactic Acid",
+      "inci": "Lactic Acid",
+      "cas": "50-21-5",
+      "pubchem_cid": "612",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 74,
+      "name_ru": "Benzoyl Peroxide",
+      "inci": "Benzoyl Peroxide",
+      "cas": "94-36-0",
+      "pubchem_cid": "7184",
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 75,
+      "name_ru": "Tea Tree Oil",
+      "inci": "Melaleuca Alternifolia Leaf Oil",
+      "cas": "68647-73-4",
+      "pubchem_cid": null,
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 76,
+      "name_ru": "Peppermint Oil",
+      "inci": "Mentha Piperita Oil",
+      "cas": "8006-90-4",
+      "pubchem_cid": null,
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 77,
+      "name_ru": "Lavender Oil",
+      "inci": "Lavandula Angustifolia Oil",
+      "cas": "8000-28-0",
+      "pubchem_cid": null,
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 78,
+      "name_ru": "Ylang-Ylang Oil",
+      "inci": "Cananga Odorata Flower Oil",
+      "cas": "8006-81-3",
+      "pubchem_cid": null,
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 79,
+      "name_ru": "Sandalwood Oil",
+      "inci": "Santalum Album Oil",
+      "cas": "8006-87-9",
+      "pubchem_cid": null,
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 80,
+      "name_ru": "Cinnamon Oil",
+      "inci": "Cinnamomum Zeylanicum Bark Oil",
+      "cas": "8015-91-6",
+      "pubchem_cid": null,
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 81,
+      "name_ru": "Clove Oil",
+      "inci": "Eugenia Caryophyllus Leaf Oil",
+      "cas": "8000-34-8",
+      "pubchem_cid": null,
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 82,
+      "name_ru": "Citrus Oils (общая группа)",
+      "inci": "Citrus Limon Peel Oil / Citrus Aurantium Dulcis Peel Oil",
+      "cas": "84929-31-7",
+      "pubchem_cid": null,
+      "category": "Расширенные аллергены"
+    },
+    {
+      "id": 83,
+      "name_ru": "Octylisothiazolinone (OIT)",
+      "inci": "Octylisothiazolinone",
+      "cas": "26530-20-1",
+      "pubchem_cid": "42077",
+      "category": "Консерванты"
+    },
+    {
+      "id": 84,
+      "name_ru": "Sodium Hydroxymethylglycinate",
+      "inci": "Sodium Hydroxymethylglycinate",
+      "cas": "70161-44-3",
+      "pubchem_cid": "159277",
+      "category": "Консерванты"
+    },
+    {
+      "id": 85,
+      "name_ru": "Bronopol (2-Bromo-2-Nitropropane-1,3-Diol)",
+      "inci": "Bronopol",
+      "cas": "52-51-7",
+      "pubchem_cid": "6337",
+      "category": "Консерванты"
+    },
+    {
+      "id": 86,
+      "name_ru": "Methyldibromo Glutaronitrile",
+      "inci": "Methyldibromo Glutaronitrile",
+      "cas": "35691-65-7",
+      "pubchem_cid": "73616",
+      "category": "Консерванты"
+    },
+    {
+      "id": 87,
+      "name_ru": "Isobutylparaben",
+      "inci": "Isobutylparaben",
+      "cas": "4247-02-3",
+      "pubchem_cid": "22761",
+      "category": "Консерванты"
+    },
+    {
+      "id": 88,
+      "name_ru": "Isopropylparaben",
+      "inci": "Isopropylparaben",
+      "cas": "4191-73-5",
+      "pubchem_cid": "22881",
+      "category": "Консерванты"
+    },
+    {
+      "id": 89,
+      "name_ru": "Benzylparaben",
+      "inci": "Benzylparaben",
+      "cas": "94-18-8",
+      "pubchem_cid": "7137",
+      "category": "Консерванты"
+    },
+    {
+      "id": 90,
+      "name_ru": "Chlorphenesin",
+      "inci": "Chlorphenesin",
+      "cas": "104-29-0",
+      "pubchem_cid": "8377",
+      "category": "Консерванты"
+    },
+    {
+      "id": 91,
+      "name_ru": "Benzalkonium Chloride",
+      "inci": "Benzalkonium Chloride",
+      "cas": "63449-41-2",
+      "pubchem_cid": "15865",
+      "category": "Консерванты"
+    },
+    {
+      "id": 92,
+      "name_ru": "Chlorhexidine Digluconate",
+      "inci": "Chlorhexidine Digluconate",
+      "cas": "18472-51-0",
+      "pubchem_cid": "9552079",
+      "category": "Консерванты"
+    },
+    {
+      "id": 93,
+      "name_ru": "Ammonium Lauryl Sulfate",
+      "inci": "Ammonium Lauryl Sulfate",
+      "cas": "2235-54-3",
+      "pubchem_cid": "23668193",
+      "category": "ПАВ (Surfactants)"
+    },
+    {
+      "id": 94,
+      "name_ru": "3-Dimethylaminopropylamine (DMAPA)",
+      "inci": "3-Dimethylaminopropylamine",
+      "cas": "109-55-7",
+      "pubchem_cid": "7922",
+      "category": "ПАВ (Surfactants)"
+    },
+    {
+      "id": 95,
+      "name_ru": "Amidoamine",
+      "inci": "Amidoamine",
+      "cas": "68140-00-1",
+      "pubchem_cid": null,
+      "category": "ПАВ (Surfactants)"
+    },
+    {
+      "id": 96,
+      "name_ru": "Cocamide DEA",
+      "inci": "Cocamide DEA",
+      "cas": "68603-42-9",
+      "pubchem_cid": "20282",
+      "category": "ПАВ (Surfactants)"
+    },
+    {
+      "id": 97,
+      "name_ru": "Cocamide MEA",
+      "inci": "Cocamide MEA",
+      "cas": "68140-00-1",
+      "pubchem_cid": null,
+      "category": "ПАВ (Surfactants)"
+    },
+    {
+      "id": 98,
+      "name_ru": "Lauramide DEA",
+      "inci": "Lauramide DEA",
+      "cas": "120-40-1",
+      "pubchem_cid": "8430",
+      "category": "ПАВ (Surfactants)"
+    },
+    {
+      "id": 99,
+      "name_ru": "Quaternium-18",
+      "inci": "Quaternium-18",
+      "cas": "61789-80-8",
+      "pubchem_cid": null,
+      "category": "ПАВ (Surfactants)"
+    },
+    {
+      "id": 100,
+      "name_ru": "Behentrimonium Chloride",
+      "inci": "Behentrimonium Chloride",
+      "cas": "17301-53-0",
+      "pubchem_cid": "160556",
+      "category": "ПАВ (Surfactants)"
+    },
+    {
+      "id": 101,
+      "name_ru": "Cetrimonium Chloride",
+      "inci": "Cetrimonium Chloride",
+      "cas": "112-02-7",
+      "pubchem_cid": "5974",
+      "category": "ПАВ (Surfactants)"
+    },
+    {
+      "id": 102,
+      "name_ru": "Stearalkonium Chloride",
+      "inci": "Stearalkonium Chloride",
+      "cas": "122-19-0",
+      "pubchem_cid": "8847",
+      "category": "ПАВ (Surfactants)"
+    },
+    {
+      "id": 103,
+      "name_ru": "Polyoxyethylene Sorbitan Monooleate (Polysorbate 80)",
+      "inci": "Polysorbate 80",
+      "cas": "9005-65-6",
+      "pubchem_cid": "5281955",
+      "category": "ПАВ (Surfactants)"
+    },
+    {
+      "id": 104,
+      "name_ru": "Sodium Cocoyl Isethionate",
+      "inci": "Sodium Cocoyl Isethionate",
+      "cas": "61789-32-0",
+      "pubchem_cid": "23665787",
+      "category": "ПАВ (Surfactants)"
+    },
+    {
+      "id": 105,
+      "name_ru": "Colophonium (Rosin)",
+      "inci": "Colophonium",
+      "cas": "8050-09-7",
+      "pubchem_cid": "6433490",
+      "category": "Латекс, смолы, канифоль"
+    },
+    {
+      "id": 106,
+      "name_ru": "Abietic Acid",
+      "inci": "Abietic Acid",
+      "cas": "514-10-3",
+      "pubchem_cid": "10569",
+      "category": "Латекс, смолы, канифоль"
+    },
+    {
+      "id": 107,
+      "name_ru": "Hydrogenated Rosin",
+      "inci": "Hydrogenated Rosin",
+      "cas": "65997-06-0",
+      "pubchem_cid": null,
+      "category": "Латекс, смолы, канифоль"
+    },
+    {
+      "id": 108,
+      "name_ru": "Glyceryl Abietate",
+      "inci": "Glyceryl Abietate",
+      "cas": "1337-89-9",
+      "pubchem_cid": "16850",
+      "category": "Латекс, смолы, канифоль"
+    },
+    {
+      "id": 109,
+      "name_ru": "Glyceryl Hydrogenated Rosinate",
+      "inci": "Glyceryl Hydrogenated Rosinate",
+      "cas": "65997-13-9",
+      "pubchem_cid": null,
+      "category": "Латекс, смолы, канифоль"
+    },
+    {
+      "id": 110,
+      "name_ru": "Pentaerythrityl Rosinate",
+      "inci": "Pentaerythrityl Rosinate",
+      "cas": "8050-26-8",
+      "pubchem_cid": null,
+      "category": "Латекс, смолы, канифоль"
+    },
+    {
+      "id": 111,
+      "name_ru": "Myroxylon Pereirae (Balsam Peru)",
+      "inci": "Myroxylon Pereirae Extract",
+      "cas": "8007-00-9",
+      "pubchem_cid": null,
+      "category": "Латекс, смолы, канифоль"
+    },
+    {
+      "id": 112,
+      "name_ru": "Myroxylon Balsamum (Balsam Tolu)",
+      "inci": "Myroxylon Balsamum Extract",
+      "cas": "9000-64-0",
+      "pubchem_cid": null,
+      "category": "Латекс, смолы, канифоль"
+    },
+    {
+      "id": 113,
+      "name_ru": "Turpentine Oil",
+      "inci": "Turpentine",
+      "cas": "8006-64-2",
+      "pubchem_cid": null,
+      "category": "Латекс, смолы, канифоль"
+    },
+    {
+      "id": 114,
+      "name_ru": "Natural Rubber Latex",
+      "inci": "Natural Rubber",
+      "cas": "9006-04-6",
+      "pubchem_cid": null,
+      "category": "Латекс, смолы, канифоль"
+    }
+  ]
+}

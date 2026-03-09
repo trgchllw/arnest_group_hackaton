@@ -1,0 +1,755 @@
+{
+  "metadata": {
+    "name": "Unified Allergen Database for Cosmetics",
+    "version": "1.0",
+    "created": "2025-11-18",
+    "language": "Russian/English",
+    "total_allergens": 114,
+    "deduplication_info": "Removed 18 duplicate entries by INCI name",
+    "source_files": [
+      "EU 82 Allergens Database",
+      "Preservatives Allergens Database",
+      "Surfactants Allergens Database",
+      "Latex Resins Allergens Database"
+    ],
+    "description": "Объединённая база данных из 114 уникальных аллергенов косметических продуктов, включая EU 26, консерванты, ПАВ и аллергены природного происхождения"
+  },
+  "categories_detailed": {
+    "EU_26": {
+      "name": "Ароматические аллергены (EU 26)",
+      "description": "26 обязательных к декларации ароматических аллергенов согласно EU Regulation 1223/2009 Annex III",
+      "regulatory_status": "Обязательная декларация при содержании > 0.01% (несмываемые) или > 0.001% (смываемые)",
+      "allergens": [
+        {
+          "id": 1,
+          "name": "Alpha-Isomethyl Ionone",
+          "inci": "Alpha-Isomethyl Ionone",
+          "cas": "127-51-5",
+          "pubchem_cid": "5364319",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 2,
+          "name": "Amyl Cinnamal",
+          "inci": "Amyl Cinnamal",
+          "cas": "122-40-7",
+          "pubchem_cid": "31211",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 3,
+          "name": "Amylcinnamyl Alcohol",
+          "inci": "Amylcinnamyl Alcohol",
+          "cas": "101-85-9",
+          "pubchem_cid": "7656",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 4,
+          "name": "Anise Alcohol",
+          "inci": "Anise Alcohol",
+          "cas": "105-13-5",
+          "pubchem_cid": "8127",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 5,
+          "name": "Benzyl Alcohol",
+          "inci": "Benzyl Alcohol",
+          "cas": "100-51-6",
+          "pubchem_cid": "244",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 6,
+          "name": "Benzyl Benzoate",
+          "inci": "Benzyl Benzoate",
+          "cas": "120-51-4",
+          "pubchem_cid": "233",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 7,
+          "name": "Benzyl Cinnamate",
+          "inci": "Benzyl Cinnamate",
+          "cas": "103-41-3",
+          "pubchem_cid": "8355",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 8,
+          "name": "Benzyl Salicylate",
+          "inci": "Benzyl Salicylate",
+          "cas": "118-58-1",
+          "pubchem_cid": "8765",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 9,
+          "name": "Butylphenyl Methylpropional (Lilial)",
+          "inci": "Butylphenyl Methylpropional",
+          "cas": "80-54-6",
+          "pubchem_cid": "31253",
+          "declaration_threshold": "Запрещен с 2022"
+        },
+        {
+          "id": 10,
+          "name": "Cinnamal",
+          "inci": "Cinnamal",
+          "cas": "104-55-2",
+          "pubchem_cid": "637511",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 11,
+          "name": "Cinnamyl Alcohol",
+          "inci": "Cinnamyl Alcohol",
+          "cas": "104-54-1",
+          "pubchem_cid": "637512",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 12,
+          "name": "Citral",
+          "inci": "Citral",
+          "cas": "5392-40-5",
+          "pubchem_cid": "638011",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 13,
+          "name": "Citronellol",
+          "inci": "Citronellol",
+          "cas": "106-22-9",
+          "pubchem_cid": "8848",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 14,
+          "name": "Coumarin",
+          "inci": "Coumarin",
+          "cas": "91-64-5",
+          "pubchem_cid": "323",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 15,
+          "name": "Eugenol",
+          "inci": "Eugenol",
+          "cas": "97-53-0",
+          "pubchem_cid": "3314",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 16,
+          "name": "Farnesol",
+          "inci": "Farnesol",
+          "cas": "4602-84-0",
+          "pubchem_cid": "445070",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 17,
+          "name": "Geraniol",
+          "inci": "Geraniol",
+          "cas": "106-24-1",
+          "pubchem_cid": "637568",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 18,
+          "name": "Hexyl Cinnamal",
+          "inci": "Hexyl Cinnamal",
+          "cas": "101-86-0",
+          "pubchem_cid": "8857",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 19,
+          "name": "Hydroxyisohexyl 3-Cyclohexene Carboxaldehyde (Lyral)",
+          "inci": "Hydroxyisohexyl 3-Cyclohexene Carboxaldehyde",
+          "cas": "31906-04-4",
+          "pubchem_cid": "14866",
+          "declaration_threshold": "Запрещен с 2021"
+        },
+        {
+          "id": 20,
+          "name": "Hydroxycitronellal",
+          "inci": "Hydroxycitronellal",
+          "cas": "107-75-5",
+          "pubchem_cid": "7794",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 21,
+          "name": "Isoeugenol",
+          "inci": "Isoeugenol",
+          "cas": "97-54-1",
+          "pubchem_cid": "6556",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 22,
+          "name": "Limonene",
+          "inci": "Limonene",
+          "cas": "5989-27-5",
+          "pubchem_cid": "22311",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 23,
+          "name": "Linalool",
+          "inci": "Linalool",
+          "cas": "78-70-6",
+          "pubchem_cid": "6549",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 24,
+          "name": "Methyl 2-Octynoate",
+          "inci": "Methyl 2-Octynoate",
+          "cas": "111-12-6",
+          "pubchem_cid": "8198",
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 25,
+          "name": "Evernia Prunastri Extract (Oakmoss)",
+          "inci": "Evernia Prunastri Extract",
+          "cas": "90028-68-5",
+          "pubchem_cid": null,
+          "declaration_threshold": "0.01% / 0.001%"
+        },
+        {
+          "id": 26,
+          "name": "Evernia Furfuracea Extract (Treemoss)",
+          "inci": "Evernia Furfuracea Extract",
+          "cas": "90028-67-4",
+          "pubchem_cid": null,
+          "declaration_threshold": "0.01% / 0.001%"
+        }
+      ]
+    },
+    "preservatives": {
+      "name": "Консерванты",
+      "description": "10 консервантов с высоким аллергенным потенциалом",
+      "regulatory_framework": "EU Regulation 1223/2009 Annex V",
+      "allergens": [
+        {
+          "id": 1,
+          "name": "Methylisothiazolinone (MI)",
+          "inci": "Methylisothiazolinone",
+          "cas": "2682-20-4",
+          "pubchem_cid": "39800",
+          "risk_category": "Очень высокий",
+          "regulatory_status": "Ограничен 0.0015% (только смываемые)",
+          "reaction_type": "Контактный дерматит, сенсибилизация"
+        },
+        {
+          "id": 2,
+          "name": "Methylchloroisothiazolinone (MCI)",
+          "inci": "Methylchloroisothiazolinone",
+          "cas": "26172-55-4",
+          "pubchem_cid": "35853",
+          "risk_category": "Высокий",
+          "regulatory_status": "Ограничен 0.0015% в комбинации с MI",
+          "reaction_type": "Контактный дерматит"
+        },
+        {
+          "id": 3,
+          "name": "Benzisothiazolinone (BIT)",
+          "inci": "Benzisothiazolinone",
+          "cas": "2634-33-5",
+          "pubchem_cid": "15540",
+          "risk_category": "Высокий",
+          "regulatory_status": "Ограничен 0.01%",
+          "reaction_type": "Аллергический контактный дерматит"
+        },
+        {
+          "id": 4,
+          "name": "Octylisothiazolinone (OIT)",
+          "inci": "Octylisothiazolinone",
+          "cas": "26530-20-1",
+          "pubchem_cid": "42077",
+          "risk_category": "Очень высокий",
+          "regulatory_status": "Запрещен в несмываемых (2021)",
+          "reaction_type": "Тяжелая сенсибилизация"
+        },
+        {
+          "id": 5,
+          "name": "Formaldehyde",
+          "inci": "Formaldehyde",
+          "cas": "50-00-0",
+          "pubchem_cid": "712",
+          "risk_category": "Канцероген",
+          "regulatory_status": "Запрещен в ЕС >0.2%",
+          "reaction_type": "Раздражение, канцерогенность"
+        },
+        {
+          "id": 6,
+          "name": "Quaternium-15",
+          "inci": "Quaternium-15",
+          "cas": "4080-31-3",
+          "pubchem_cid": "73077",
+          "risk_category": "Высокий",
+          "regulatory_status": "Формальдегид-донор",
+          "reaction_type": "Контактный дерматит"
+        },
+        {
+          "id": 7,
+          "name": "DMDM Hydantoin",
+          "inci": "DMDM Hydantoin",
+          "cas": "6440-58-0",
+          "pubchem_cid": "32407",
+          "risk_category": "Высокий",
+          "regulatory_status": "Формальдегид-донор",
+          "reaction_type": "Аллергический дерматит"
+        },
+        {
+          "id": 8,
+          "name": "Imidazolidinyl Urea",
+          "inci": "Imidazolidinyl Urea",
+          "cas": "39236-46-9",
+          "pubchem_cid": "5339",
+          "risk_category": "Средний",
+          "regulatory_status": "Формальдегид-донор",
+          "reaction_type": "Контактная сенсибилизация"
+        },
+        {
+          "id": 9,
+          "name": "Diazolidinyl Urea",
+          "inci": "Diazolidinyl Urea",
+          "cas": "78491-02-8",
+          "pubchem_cid": "38082",
+          "risk_category": "Средний",
+          "regulatory_status": "Формальдегид-донор",
+          "reaction_type": "Контактный дерматит"
+        },
+        {
+          "id": 10,
+          "name": "Sodium Hydroxymethylglycinate",
+          "inci": "Sodium Hydroxymethylglycinate",
+          "cas": "70161-44-3",
+          "pubchem_cid": "159277",
+          "risk_category": "Средний",
+          "regulatory_status": "Формальдегид-донор",
+          "reaction_type": "Раздражение кожи"
+        },
+        {
+          "id": 11,
+          "name": "Bronopol (2-Bromo-2-Nitropropane-1,3-Diol)",
+          "inci": "Bronopol",
+          "cas": "52-51-7",
+          "pubchem_cid": "6337",
+          "risk_category": null,
+          "regulatory_status": null,
+          "reaction_type": null
+        },
+        {
+          "id": 12,
+          "name": "Methyldibromo Glutaronitrile",
+          "inci": "Methyldibromo Glutaronitrile",
+          "cas": "35691-65-7",
+          "pubchem_cid": "73616",
+          "risk_category": "Очень высокий",
+          "regulatory_status": "Запрещен в ЕС (2007)",
+          "reaction_type": "Тяжелая сенсибилизация"
+        },
+        {
+          "id": 13,
+          "name": "Iodopropynyl Butylcarbamate (IPBC)",
+          "inci": "Iodopropynyl Butylcarbamate",
+          "cas": "55406-53-6",
+          "pubchem_cid": "30858",
+          "risk_category": null,
+          "regulatory_status": null,
+          "reaction_type": null
+        },
+        {
+          "id": 14,
+          "name": "Methylparaben",
+          "inci": "Methylparaben",
+          "cas": "99-76-3",
+          "pubchem_cid": "7456",
+          "risk_category": "Низкий-средний",
+          "regulatory_status": "Разрешен",
+          "reaction_type": "Эндокринный дизраптор, редкая аллергия"
+        },
+        {
+          "id": 15,
+          "name": "Ethylparaben",
+          "inci": "Ethylparaben",
+          "cas": "120-47-8",
+          "pubchem_cid": "8434",
+          "risk_category": "Низкий-средний",
+          "regulatory_status": "Разрешен",
+          "reaction_type": "Эндокринный дизраптор"
+        },
+        {
+          "id": 16,
+          "name": "Propylparaben",
+          "inci": "Propylparaben",
+          "cas": "94-13-3",
+          "pubchem_cid": "7175",
+          "risk_category": "Средний",
+          "regulatory_status": "Разрешен",
+          "reaction_type": "Эндокринный дизраптор, контактная аллергия"
+        },
+        {
+          "id": 17,
+          "name": "Butylparaben",
+          "inci": "Butylparaben",
+          "cas": "94-26-8",
+          "pubchem_cid": "7184",
+          "risk_category": "Средний-высокий",
+          "regulatory_status": "Разрешен",
+          "reaction_type": "Эндокринный дизраптор, аллергия"
+        },
+        {
+          "id": 18,
+          "name": "Isobutylparaben",
+          "inci": "Isobutylparaben",
+          "cas": "4247-02-3",
+          "pubchem_cid": "22761",
+          "risk_category": "Средний",
+          "regulatory_status": "Разрешен",
+          "reaction_type": "Эндокринный дизраптор"
+        },
+        {
+          "id": 19,
+          "name": "Isopropylparaben",
+          "inci": "Isopropylparaben",
+          "cas": "4191-73-5",
+          "pubchem_cid": "22881",
+          "risk_category": "Низкий-средний",
+          "regulatory_status": "Разрешен",
+          "reaction_type": "Потенциальная аллергия"
+        },
+        {
+          "id": 20,
+          "name": "Benzylparaben",
+          "inci": "Benzylparaben",
+          "cas": "94-18-8",
+          "pubchem_cid": "7137",
+          "risk_category": "Средний",
+          "regulatory_status": "Разрешен",
+          "reaction_type": "Эндокринный дизраптор, редкая аллергия"
+        },
+        {
+          "id": 21,
+          "name": "Phenoxyethanol",
+          "inci": "Phenoxyethanol",
+          "cas": "122-99-6",
+          "pubchem_cid": "31236",
+          "risk_category": "Низкий-средний",
+          "regulatory_status": "Ограничен 1%",
+          "reaction_type": "Раздражение при высоких концентрациях"
+        },
+        {
+          "id": 22,
+          "name": "Chlorphenesin",
+          "inci": "Chlorphenesin",
+          "cas": "104-29-0",
+          "pubchem_cid": "8377",
+          "risk_category": "Низкий",
+          "regulatory_status": "Разрешен 0.3%",
+          "reaction_type": "Редкие случаи контактного дерматита"
+        },
+        {
+          "id": 23,
+          "name": "Triclosan",
+          "inci": "Triclosan",
+          "cas": "3380-34-5",
+          "pubchem_cid": "5564",
+          "risk_category": "Средний",
+          "regulatory_status": "Запрещен в смываемых (2016)",
+          "reaction_type": "Эндокринный дизраптор, аллергия"
+        },
+        {
+          "id": 24,
+          "name": "Benzalkonium Chloride",
+          "inci": "Benzalkonium Chloride",
+          "cas": "63449-41-2",
+          "pubchem_cid": "15865",
+          "risk_category": "Средний-высокий",
+          "regulatory_status": "Ограничен 0.1%",
+          "reaction_type": "Раздражение, контактная аллергия"
+        },
+        {
+          "id": 25,
+          "name": "Chlorhexidine Digluconate",
+          "inci": "Chlorhexidine Digluconate",
+          "cas": "18472-51-0",
+          "pubchem_cid": "9552079",
+          "risk_category": "Средний",
+          "regulatory_status": "Ограничен 0.3%",
+          "reaction_type": "Анафилактические реакции, дерматит"
+        }
+      ]
+    },
+    "surfactants": {
+      "name": "ПАВ (Surfactants)",
+      "description": "12 поверхностно-активных веществ-аллергенов",
+      "regulatory_framework": "CosIng Database, научные публикации",
+      "allergens": [
+        {
+          "id": 1,
+          "name": "Sodium Lauryl Sulfate (SLS)",
+          "inci": "Sodium Lauryl Sulfate",
+          "cas": "151-21-3",
+          "pubchem_cid": "3423265",
+          "risk_category": "Средний-высокий",
+          "surfactant_type": "Анионное ПАВ",
+          "reaction_type": "Раздражение кожи, контактный дерматит"
+        },
+        {
+          "id": 2,
+          "name": "Sodium Laureth Sulfate (SLES)",
+          "inci": "Sodium Laureth Sulfate",
+          "cas": "68585-34-2",
+          "pubchem_cid": "23665884",
+          "risk_category": "Средний",
+          "surfactant_type": "Анионное ПАВ",
+          "reaction_type": "Раздражение, реже чем SLS"
+        },
+        {
+          "id": 3,
+          "name": "Ammonium Lauryl Sulfate",
+          "inci": "Ammonium Lauryl Sulfate",
+          "cas": "2235-54-3",
+          "pubchem_cid": "23668193",
+          "risk_category": "Средний-высокий",
+          "surfactant_type": "Анионное ПАВ",
+          "reaction_type": "Раздражение, сенсибилизация"
+        },
+        {
+          "id": 4,
+          "name": "Cocamidopropyl Betaine (CAPB)",
+          "inci": "Cocamidopropyl Betaine",
+          "cas": "61789-40-0",
+          "pubchem_cid": "20280",
+          "risk_category": "Средний",
+          "surfactant_type": "Амфотерное ПАВ",
+          "reaction_type": "Аллергический контактный дерматит"
+        },
+        {
+          "id": 5,
+          "name": "3-Dimethylaminopropylamine (DMAPA)",
+          "inci": "3-Dimethylaminopropylamine",
+          "cas": "109-55-7",
+          "pubchem_cid": "7922",
+          "risk_category": "Высокий",
+          "surfactant_type": "Примесь в CAPB",
+          "reaction_type": "Сильная сенсибилизация, дерматит век"
+        },
+        {
+          "id": 6,
+          "name": "Amidoamine",
+          "inci": "Amidoamine",
+          "cas": "68140-00-1",
+          "pubchem_cid": null,
+          "risk_category": "Высокий",
+          "surfactant_type": "Примесь в амфотерных ПАВ",
+          "reaction_type": "Аллергический контактный дерматит"
+        },
+        {
+          "id": 7,
+          "name": "Cocamide DEA",
+          "inci": "Cocamide DEA",
+          "cas": "68603-42-9",
+          "pubchem_cid": "20282",
+          "risk_category": "Средний-высокий",
+          "surfactant_type": "Неионное ПАВ",
+          "reaction_type": "Контактная аллергия, канцерогенные примеси"
+        },
+        {
+          "id": 8,
+          "name": "Cocamide MEA",
+          "inci": "Cocamide MEA",
+          "cas": "68140-00-1",
+          "pubchem_cid": null,
+          "risk_category": "Средний",
+          "surfactant_type": "Неионное ПАВ",
+          "reaction_type": "Контактный дерматит"
+        },
+        {
+          "id": 9,
+          "name": "Lauramide DEA",
+          "inci": "Lauramide DEA",
+          "cas": "120-40-1",
+          "pubchem_cid": "8430",
+          "risk_category": "Средний-высокий",
+          "surfactant_type": "Неионное ПАВ",
+          "reaction_type": "Контактная сенсибилизация"
+        },
+        {
+          "id": 10,
+          "name": "Quaternium-18",
+          "inci": "Quaternium-18",
+          "cas": "61789-80-8",
+          "pubchem_cid": null,
+          "risk_category": "Средний",
+          "surfactant_type": "Катионное ПАВ",
+          "reaction_type": "Раздражение, контактный дерматит"
+        },
+        {
+          "id": 11,
+          "name": "Behentrimonium Chloride",
+          "inci": "Behentrimonium Chloride",
+          "cas": "17301-53-0",
+          "pubchem_cid": "160556",
+          "risk_category": "Низкий-средний",
+          "surfactant_type": "Катионное ПАВ",
+          "reaction_type": "Редкая контактная аллергия"
+        },
+        {
+          "id": 12,
+          "name": "Cetrimonium Chloride",
+          "inci": "Cetrimonium Chloride",
+          "cas": "112-02-7",
+          "pubchem_cid": "5974",
+          "risk_category": "Средний",
+          "surfactant_type": "Катионное ПАВ",
+          "reaction_type": "Раздражение кожи и глаз"
+        },
+        {
+          "id": 13,
+          "name": "Stearalkonium Chloride",
+          "inci": "Stearalkonium Chloride",
+          "cas": "122-19-0",
+          "pubchem_cid": "8847",
+          "risk_category": "Средний",
+          "surfactant_type": "Катионное ПАВ",
+          "reaction_type": "Контактный дерматит"
+        },
+        {
+          "id": 14,
+          "name": "Polyoxyethylene Sorbitan Monooleate (Polysorbate 80)",
+          "inci": "Polysorbate 80",
+          "cas": "9005-65-6",
+          "pubchem_cid": "5281955",
+          "risk_category": null,
+          "surfactant_type": null,
+          "reaction_type": null
+        },
+        {
+          "id": 15,
+          "name": "Sodium Cocoyl Isethionate",
+          "inci": "Sodium Cocoyl Isethionate",
+          "cas": "61789-32-0",
+          "pubchem_cid": "23665787",
+          "risk_category": "Низкий",
+          "surfactant_type": "Анионное ПАВ",
+          "reaction_type": "Мягкое раздражение, минимальная сенсибилизация"
+        }
+      ]
+    },
+    "latex_resins": {
+      "name": "Латекс, смолы, канифоль",
+      "description": "10 аллергенов природного происхождения",
+      "regulatory_framework": "EU Regulation 1223/2009, SCCS Opinions",
+      "allergens": [
+        {
+          "id": 1,
+          "name": "Colophonium (Rosin)",
+          "inci": "Colophonium",
+          "cas": "8050-09-7",
+          "pubchem_cid": "6433490",
+          "risk_category": "Высокий",
+          "origin": "Смола сосны, канифоль",
+          "reaction_type": "Аллергический контактный дерматит, экзема"
+        },
+        {
+          "id": 2,
+          "name": "Abietic Acid",
+          "inci": "Abietic Acid",
+          "cas": "514-10-3",
+          "pubchem_cid": "10569",
+          "risk_category": "Высокий",
+          "origin": "Основной компонент канифоли",
+          "reaction_type": "Контактная сенсибилизация, дерматит"
+        },
+        {
+          "id": 3,
+          "name": "Hydrogenated Rosin",
+          "inci": "Hydrogenated Rosin",
+          "cas": "65997-06-0",
+          "pubchem_cid": null,
+          "risk_category": "Средний-высокий",
+          "origin": "Гидрированная канифоль",
+          "reaction_type": "Контактная аллергия (ниже чем Rosin)"
+        },
+        {
+          "id": 4,
+          "name": "Glyceryl Abietate",
+          "inci": "Glyceryl Abietate",
+          "cas": "1337-89-9",
+          "pubchem_cid": "16850",
+          "risk_category": "Средний-высокий",
+          "origin": "Эфир глицерина и абиетиновой кислоты",
+          "reaction_type": "Контактный дерматит"
+        },
+        {
+          "id": 5,
+          "name": "Glyceryl Hydrogenated Rosinate",
+          "inci": "Glyceryl Hydrogenated Rosinate",
+          "cas": "65997-13-9",
+          "pubchem_cid": null,
+          "risk_category": "Средний",
+          "origin": "Гидрированный эфир канифоли",
+          "reaction_type": "Контактная аллергия"
+        },
+        {
+          "id": 6,
+          "name": "Pentaerythrityl Rosinate",
+          "inci": "Pentaerythrityl Rosinate",
+          "cas": "8050-26-8",
+          "pubchem_cid": null,
+          "risk_category": "Средний",
+          "origin": "Эфир канифоли",
+          "reaction_type": "Контактный дерматит"
+        },
+        {
+          "id": 7,
+          "name": "Myroxylon Pereirae (Balsam Peru)",
+          "inci": "Myroxylon Pereirae Extract",
+          "cas": "8007-00-9",
+          "pubchem_cid": null,
+          "risk_category": "Высокий",
+          "origin": "Бальзам из дерева Myroxylon",
+          "reaction_type": "Контактная аллергия, перекрестные реакции с канифолью"
+        },
+        {
+          "id": 8,
+          "name": "Myroxylon Balsamum (Balsam Tolu)",
+          "inci": "Myroxylon Balsamum Extract",
+          "cas": "9000-64-0",
+          "pubchem_cid": null,
+          "risk_category": "Средний-высокий",
+          "origin": "Бальзам толу",
+          "reaction_type": "Контактный дерматит, перекрестная реактивность"
+        },
+        {
+          "id": 9,
+          "name": "Turpentine Oil",
+          "inci": "Turpentine",
+          "cas": "8006-64-2",
+          "pubchem_cid": null,
+          "risk_category": "Высокий",
+          "origin": "Терпентиновое масло, скипидар",
+          "reaction_type": "Раздражение кожи, аллергический дерматит"
+        },
+        {
+          "id": 10,
+          "name": "Natural Rubber Latex",
+          "inci": "Natural Rubber",
+          "cas": "9006-04-6",
+          "pubchem_cid": null,
+          "risk_category": "Высокий",
+          "origin": "Натуральный латекс (Hevea brasiliensis)",
+          "reaction_type": "IgE-опосредованная аллергия типа I, контактный дерматит типа IV"
+        }
+      ]
+    }
+  }
+}

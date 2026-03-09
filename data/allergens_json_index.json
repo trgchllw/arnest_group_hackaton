@@ -1,0 +1,137 @@
+{
+  "index": {
+    "title": "Allergen Database JSON Files Index",
+    "title_ru": "Указатель JSON файлов базы данных аллергенов",
+    "creation_date": "2025-11-18",
+    "files": [
+      {
+        "name": "allergens_database.json",
+        "type": "Main Database",
+        "structure": "Simple key-value format",
+        "entries": 114,
+        "root_element": "allergens",
+        "fields_per_entry": 6,
+        "fields": {
+          "id": "Numeric identifier (1-114)",
+          "name_ru": "Allergen name in Russian/English",
+          "inci": "INCI nomenclature",
+          "cas": "CAS Registry Number",
+          "pubchem_cid": "PubChem Compound Identifier",
+          "category": "Allergen category"
+        },
+        "use_case": "Fast lookup, API responses, mobile app storage"
+      },
+      {
+        "name": "allergens_database_detailed.json",
+        "type": "Detailed Database",
+        "structure": "Hierarchical by category",
+        "entries": 76,
+        "root_elements": [
+          "categories_detailed.EU_26",
+          "categories_detailed.preservatives",
+          "categories_detailed.surfactants",
+          "categories_detailed.latex_resins"
+        ],
+        "fields_per_entry": "8-9 (varying by category)",
+        "categories": {
+          "EU_26": {
+            "fields": [
+              "id",
+              "name",
+              "inci",
+              "cas",
+              "pubchem_cid",
+              "declaration_threshold"
+            ],
+            "entries": 26
+          },
+          "preservatives": {
+            "fields": [
+              "id",
+              "name",
+              "inci",
+              "cas",
+              "pubchem_cid",
+              "risk_category",
+              "regulatory_status",
+              "reaction_type"
+            ],
+            "entries": 25
+          },
+          "surfactants": {
+            "fields": [
+              "id",
+              "name",
+              "inci",
+              "cas",
+              "pubchem_cid",
+              "risk_category",
+              "surfactant_type",
+              "reaction_type"
+            ],
+            "entries": 15
+          },
+          "latex_resins": {
+            "fields": [
+              "id",
+              "name",
+              "inci",
+              "cas",
+              "pubchem_cid",
+              "risk_category",
+              "origin",
+              "reaction_type"
+            ],
+            "entries": 10
+          }
+        },
+        "use_case": "Detailed analysis, regulatory compliance, scientific research"
+      },
+      {
+        "name": "allergens_report_summary.json",
+        "type": "Summary Report",
+        "structure": "Hierarchical with nested statistics",
+        "sections": {
+          "summary": "Quantitative overview",
+          "deduplication_report": "Data cleaning details",
+          "data_quality_report": "Data completeness metrics",
+          "categorization_report": "Distribution by category",
+          "regulatory_framework": "Standards and databases used",
+          "output_files": "File descriptions",
+          "recommendations": "Usage recommendations",
+          "quality_checks_performed": "Validation checklist"
+        },
+        "use_case": "Documentation, auditing, project reporting"
+      }
+    ],
+    "total_files": 3,
+    "total_allergens": 114,
+    "total_entries_all_files": 203
+  },
+  "conversion_notes": {
+    "original_format": "XLSX (Excel)",
+    "converted_format": "JSON",
+    "conversion_date": "2025-11-18",
+    "data_preservation": "100% - All data retained",
+    "enhancements": [
+      "Added metadata section",
+      "Organized by category hierarchy",
+      "Added summary statistics",
+      "UTF-8 encoding for international characters"
+    ]
+  },
+  "integration_examples": {
+    "python": {
+      "load_main_db": "import json; db = json.load(open('allergens_database.json'))",
+      "query_by_id": "allergen = next(a for a in db['allergens'] if a['id'] == 1)"
+    },
+    "javascript": {
+      "load_main_db": "const db = require('./allergens_database.json');",
+      "query_by_name": "const allergen = db.allergens.find(a => a.name_ru === 'Formaldehyde');"
+    },
+    "sql": {
+      "note": "Can be imported into database using JSON functions",
+      "postgresql": "SELECT * FROM json_to_recordset(data) AS x(...)"
+    }
+  }
+}
