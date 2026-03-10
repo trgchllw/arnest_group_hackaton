@@ -1,1 +1,0 @@
-# arnest_group_hackaton
