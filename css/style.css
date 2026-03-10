@@ -70,6 +70,7 @@ header h1 {
     font-size: .7rem;
     color: var(--text-dim);
     padding: 4px;
+    margin-top: 12px;
 }
 
 .status-dot {
@@ -736,6 +737,14 @@ header h1 {
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: var(--radius);
+}
+
+.edu-card-img {
+    width: 100%;
+    max-height: 140px;
+    object-fit: contain;
+    margin-bottom: 14px;
+    border-radius: 8px;
 }
 
 .edu-card h3 {
